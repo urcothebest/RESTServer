@@ -3,7 +3,6 @@
 // ============================
 process.env.PORT = process.env.PORT || 3000;
 
-
 // ============================
 //  Entorno
 // ============================
@@ -19,5 +18,9 @@ if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
     urlDB = process.env.MONGO_URI;
+    // process.env.MONGO = process.env.MONGO;
+    // urlDB = process.env.MONGO_URI
 }
+// console.log('process.env', process.env);
+// console.log('urlDB', urlDB);
 process.env.URLDB = urlDB;
