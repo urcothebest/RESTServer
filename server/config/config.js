@@ -34,6 +34,17 @@ if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
     urlDB = process.env.MONGO_URI;
+
 }
 
+if (!urlDB) {
+    console.log('String de conexion vacío urlDB ', urlDB);
+}
+
+
 process.env.URLDB = urlDB;
+
+// ============================
+//  Google Client ID
+// ============================
+process.env.CLIENT_ID = process.env.CLIENT_ID || '202751286237-77ed2pl8gs88d2vvm3t5c5vkvtbld9mq.apps.googleusercontent.com';
